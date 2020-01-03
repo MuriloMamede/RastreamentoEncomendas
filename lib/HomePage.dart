@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
   void _track() async {
 
     //ex.: AB123456789BR
-    String codigo =_trackingCodeController.text;
+    String codigo =_trackingCodeController.text.toUpperCase();
 
     String envelope =
         "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" "
