@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
   void _track() async {
 
     //ex.: AB123456789BR
-    String codigo = "lo457016692cn";
+    String codigo =_trackingCodeController.text;
 
     String envelope =
         "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" "
@@ -28,7 +28,7 @@ class _HomeState extends State<Home> {
             +"         <senha>SRO</senha>  "
             +"         <tipo>L</tipo>  "
             +"         <resultado>T</resultado>  "
-            +"         <lingua>101</lingua> "
+            +"         <lingua>102</lingua> "
             +"         <objetos>"+codigo+"</objetos> "
             +"      </res:buscaEventosLista>  "
             +"   </soapenv:Body> "
@@ -48,11 +48,11 @@ class _HomeState extends State<Home> {
         answer ="Erro: "+objeto.erro;
       }else{
         answer =
-            "Número:"+objeto.numero+"\n"
-                +"Categoria:"+objeto.categoria+"\n"
-                +"Descrição:"+objeto.descricao+"\n"
-                +"Data:"+objeto.data+"\n"
-                +"Hora:"+objeto.hora+"\n";
+            "Number:"+objeto.numero+"\n"
+                +"Category:"+objeto.categoria+"\n"
+                +"Description:"+objeto.descricao+"\n"
+                +"Date:"+objeto.data+"\n"
+                +"Time:"+objeto.hora+"\n";
       }
     });
 
@@ -87,7 +87,7 @@ class _HomeState extends State<Home> {
                   //maxLengthEnforced: true,
                   style: TextStyle(
                       fontSize: 20,
-                      color: Colors.red
+                      color: Colors.black
 
                   ),
                   controller: _trackingCodeController,
@@ -108,7 +108,16 @@ class _HomeState extends State<Home> {
                   onPressed: _track,
                 ),
               ),
-                Text(answer)
+              Padding(padding: EdgeInsets.only(top: 20),
+              child: Text(answer,
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+              )
+              ) ,
+
               ],
             ),
           ),

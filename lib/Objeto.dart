@@ -37,11 +37,10 @@ class Objeto{
       data=obj.first.findAllElements("evento").toList()[0].findElements("data").first.text;
       hora=obj.first.findAllElements("evento").toList()[0].findElements("hora").first.text;
       descricao=obj.first.findAllElements("evento").toList()[0].findElements("descricao").first.text;
-      detalhe=obj.first.findAllElements("evento").toList()[0].findElements("detalhe").first.text;
       local=obj.first.findAllElements("evento").toList()[0].findElements("local").first.text;
       codigo=obj.first.findAllElements("evento").toList()[0].findElements("codigo").first.text;
-      cidade=obj.first.findAllElements("evento").toList()[0].findElements("cidade").first.text;
-      uf=obj.first.findAllElements("evento").toList()[0].findElements("uf").first.text;
+     // cidade=obj.first.findAllElements("evento").toList()[0].findElements("cidade").first.text;
+      //uf=obj.first.findAllElements("evento").toList()[0].findElements("uf").first.text;
 
     }
 
